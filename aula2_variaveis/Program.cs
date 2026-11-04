@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Reflection.Emit;
 using System.Runtime.ConstrainedExecution;
 using System.Security.Cryptography;
@@ -27,29 +28,101 @@ namespace aula2_variaveis
 
             //idade = 30;
 
-            //idade = 30 +1;
+            //idade = 30 + 1;
 
 
-            //Console.WriteLine(idade);
+            //Console.WriteLine("A pessoa tem " + idade + " anos de idade.");
 
             //bool completo = false, estaDeNoite = true;
 
-            int x;
+            //int x;
 
-            x = 10;
+            //x = 10;
+
+            ///*
+            //  Comentário 
+            //  em multiplas 
+            //  linhas
+            // */
+
+            //// x é a mesma coisa que escrever 10
+            //x = x + 5;
+
+            ////x = y;
+            ////x = A;
+            //Console.WriteLine(x);
+
+            //// 1. Declarar variáveis
+            //string nome1;
+            //int dia, mes, ano;
+            //// 2. Atribuir valores
+            //nome1 = "Tiago Castro";
+            //dia = 28;
+            //mes = 3;
+            //ano = 2002;
+            //// 3. Mostrar na consola
+            //Console.WriteLine("NOME: " + nome1);
+            //Console.WriteLine("DIA: " + dia + "\nMÊS: " + mes + "\nANO: " + ano);
+
+            //string nome2;
+            //int idade1;
+            //double altura1;
+
+            //// Ler texto
+            //Console.WriteLine("Digite o 1º nome: ");
+            //nome2 = Console.ReadLine();
+
+            //// int.Parse converte a string lida para int
+            //Console.WriteLine("Digite a 1ª idade: ");
+            //idade1 = int.Parse(Console.ReadLine());
+
+            //// double.Parse converte a string lida para double
+            //Console.WriteLine("Digite a 1ª altura: ");
+            //altura1 = double.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Nome: " + nome2);
+            //Console.WriteLine("Idade: " + idade1);
+            //Console.WriteLine("Altura: " + altura1);
 
 
-            /*
-              Comentário 
-              em multiplas 
-              linhas
-             */
 
-            // x é a mesma coisa que escrever 10
-            x = x + 5;
 
-            x = y;
-            Console.WriteLine(x);
+            //5. Leia o código de uma peça, a quantidade e o preço da peça.
+
+            //string codigo;
+            //int qtd;
+            //double preco;
+
+            //Console.WriteLine("Digite o código: ");
+            //codigo = Console.ReadLine();
+
+            ////int.Parse - Converte o que o utilizador colocou para inteiros
+            //Console.WriteLine("Digite a quantidade: ");
+            //qtd = int.Parse(Console.ReadLine());
+
+            ////double.Parse - Converte o que o utilizador colocou para números reais
+            //Console.WriteLine("Digite o valor do preço: ");
+            //preco = double.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Valor do código: " + codigo);
+            //Console.WriteLine("Valor do quantidade: " + qtd);
+            //Console.WriteLine("Valor do preço: " + preco);
+
+            //////////////
+            ///
+
+            //int a = 5;
+            //int b = 2;
+
+            //double resultado = (double) a / b;
+
+
+            //Console.Write(resultado);
+
+
+            //Console.ReadKey();
+
+
 
 
 
@@ -262,6 +335,257 @@ namespace aula2_variaveis
             //Sugestão: utilize a fórmula C = 5 / 9(F - 32).
 
             #endregion
+
+            #region Exercícios com variáveis
+
+            //1. Declare variáveis para guardar nome (string), idade
+            //(int), altura(double) e se é estudante(bool). Atribua
+            //valores e mostre-os na consola.
+            //string nome = "Tiago Machado";
+            //int idade = 3;
+            //double altura = 1.05;
+            //bool estudante = false;
+
+            //Console.WriteLine(nome);
+            //Console.WriteLine(idade);
+            //Console.WriteLine(altura);
+            //Console.WriteLine(estudante);
+
+            //2. Leia o nome e a data de nascimento(dia, mês e ano) e
+            // escreva - os na consola.
+            //string nome = "Tiago Machado";
+            //string dataNascimento;
+
+            //Console.WriteLine("Digite o nome: ");
+            //nome = Console.ReadLine();
+
+            //Console.WriteLine("Digite a data de nascimento: ");
+            //dataNascimento = Console.ReadLine();
+
+            ////string dataNascimento = "28/03/2023";
+
+            ////int ano = 2023;
+            ////int mes = 03;
+            ////int dia = 28;
+
+            //Console.WriteLine("Nome: " + nome);
+            //Console.WriteLine("Data de nascimento: " + dataNascimento);
+            ////Console.WriteLine("Data de nascimento: " + dia + "/0" + mes + "/" +ano);
+
+
+
+            // 3. "Leia o nome e a idade de duas pessoas e mostre-os.
+
+            //Escrever -> Console.WriteLine(
+            //Ler -> Console.ReadLine()
+
+            //int idade1, idade2;
+            //string nome1, nome2;
+
+            ////Escrever e ler
+            //Console.WriteLine("Digite o nome da 1º pessoa: ");
+            //nome1 = Console.ReadLine();
+
+            //Console.WriteLine("Digite o nome da 2º pessoa: ");
+            //nome2 = Console.ReadLine();
+
+            //Console.WriteLine("Digite a idade da 1º pessoa: ");
+            //idade1 = int.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Digite a idade da 2º pessoa: ");
+            //idade2 = int.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Nome da 1º pessoa: " + nome1);
+            //Console.WriteLine("Idade da 1º pessoa: " + idade1);
+            //Console.WriteLine("Nome da 2º pessoa: " + nome2);
+            //Console.WriteLine("Idade da 2º pessoa: " + idade2);
+
+            //4. Leia o nome e o salário de dois funcionários e mostre-os.
+            //double salario1, salario2;
+            //string nome1, nome2;
+
+            ////Escrever e ler
+            //Console.WriteLine("Digite o nome da 1º pessoa: ");
+            //nome1 = Console.ReadLine();
+
+            //Console.WriteLine("Digite o nome da 2º pessoa: ");
+            //nome2 = Console.ReadLine();
+
+            //Console.WriteLine("Digite o salário da 1º pessoa: ");
+            //salario1 = double.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Digite o salário da 2º pessoa: ");
+            //salario2 = double.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Nome da 1º pessoa: " + nome1);
+            //Console.WriteLine("salário da 1º pessoa: " + salario1);
+            //Console.WriteLine("Nome da 2º pessoa: " + nome2);
+            //Console.WriteLine("salário da 2º pessoa: " + salario2);
+
+            //5. Leia o código de uma peça, a quantidade e o preço da
+            //peça.
+            //string codigo;
+            //int quantidade;
+            //double preco;
+
+            //////Escrever e ler
+            //Console.WriteLine("Digite o código: ");
+            //codigo = Console.ReadLine();
+
+            //Console.WriteLine("Digite a quantidade: ");
+            //quantidade = int.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Digite o preço: ");
+            //preco = double.Parse(Console.ReadLine());
+
+            ///*
+            //Console.WriteLine("Código: " + codigo);
+            //Console.WriteLine("Quantidade: " + quantidade);
+            //Console.WriteLine("Preço: " + preco);
+            //*/
+
+            //int i = 10;
+
+            //string texto = i.ToString(); // str = "10"
+
+            //// 10 + abc -> 10abc
+            //texto = texto + "abc";
+            //Console.WriteLine(texto);
+
+            //2589 -> 8925
+            //int numero = 2589;
+
+            //string texto = numero.ToString();
+
+            //string numeroTrocado;
+
+            //Console.WriteLine(texto);
+            //Console.WriteLine(texto[0]);
+            //Console.WriteLine(texto[1]);
+            //Console.WriteLine(texto[2]);
+            //Console.WriteLine(texto[3]);
+
+            //numeroTrocado = "" + texto[2] + texto[3] + texto[0] + texto[1];
+
+            //Console.WriteLine(numeroTrocado);
+
+            //int valor = 0;
+            //string str = "";
+            //double valorConvertido = 0.0;
+            //Console.Write("Insira um valor inteiro: ");
+            //valor = int.Parse(Console.ReadLine());
+            //Console.WriteLine(valor);
+            //str = "24,45";
+            //valorConvertido = (int) double.Parse(str);
+            //Console.Write("\n" + valorConvertido);
+
+
+
+            #endregion
+
+            #region Exercícios com conversões
+
+            // 1. Converta a variável string valor = "0123" para um
+            // número do tipo int.
+            //string valor = "0123";
+            //int numero;
+
+            //numero = int.Parse(valor);
+
+            //Console.WriteLine(numero); //123
+
+            //2.Converta a variável int idade = 20 para string e junte - lhe
+            //uma letra.
+            //int idade = 20;
+            //string texto;
+
+            //texto = idade.ToString() + "T";
+
+            //Console.WriteLine(texto);
+
+            //3. Converta a variável double comprimento = 1.70 para o
+            // tipo int.
+            //double comprimento = 1.70;
+            //int valor;
+
+            //valor = (int) comprimento;// valor = 1
+
+            //Console.WriteLine(valor);
+            //Console.WriteLine(comprimento);
+
+            //4. Converta a variável double preco = 55.5 para string e
+            // junte - lhe uma letra.
+
+            //double preco = 55.5;
+            //string texto;
+
+            //texto = preco.ToString() + "L";
+
+            //Console.WriteLine(texto);
+
+            #endregion
+
+            //int resto = 10 % 3;
+
+            //Console.WriteLine("Resultado: " + resto);
+
+
+            #region Exercícios com operadores 
+
+            //1. Leia o nome e o salário de dois funcionários e mostre a
+            //média dos salários.
+            //double salario1, salario2, media;
+            //string nome1, nome2;
+
+            ////Escrever e ler
+            //Console.WriteLine("Digite o nome da 1º pessoa: ");
+            //nome1 = Console.ReadLine();
+
+            //Console.WriteLine("Digite o nome da 2º pessoa: ");
+            //nome2 = Console.ReadLine();
+
+            //Console.WriteLine("Digite o salário da 1º pessoa: ");
+            //salario1 = double.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Digite o salário da 2º pessoa: ");
+            //salario2 = double.Parse(Console.ReadLine());
+
+            //media  = (salario1 +  salario2) / 2;
+
+            //Console.WriteLine("Nome da 1º pessoa: " + nome1);
+            //Console.WriteLine("salário da 1º pessoa: " + salario1);
+            //Console.WriteLine("Nome da 2º pessoa: " + nome2);
+            //Console.WriteLine("salário da 2º pessoa: " + salario2);
+            //Console.WriteLine("Media dos salários: " + media);
+
+            //4. Crie uma calculadora que leia dois números e faça as 4
+            //operações básicas.
+            //double numero1, numero2, soma, subtracao, multiplicacao, divisao;
+
+            //////Escrever e ler
+            //Console.WriteLine("Digite o 1º número: ");
+            //numero1 = double.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Digite o 2º número: ");
+            //numero2 = double.Parse(Console.ReadLine());
+
+            //soma = numero1 + numero2;
+
+            //subtracao = numero1 - numero2;
+
+            //multiplicacao = numero1 * numero2;
+
+            //divisao = numero1 / numero2;
+
+            //Console.WriteLine("soma: " + soma); 
+            //Console.WriteLine("subtracao: " + subtracao); 
+            //Console.WriteLine("multiplicacao: " + multiplicacao); 
+            //Console.WriteLine("divisao: " + divisao);
+
+            Console.WriteLine(Math.Pow(5, 2));
+
+            #endregion
+
 
             Console.ReadKey();
         }
