@@ -97,7 +97,8 @@ namespace aula3_EstruturaDecisao
             //}
 
             //6. Encontre o maior e o menor número entre três valores.
-            int numero1, numero2, numero3, maior, menor;
+            int numero1, numero2, numero3, maior;
+            bool evitarRepeticao = false;
 
 
             Console.WriteLine("Digite o número 1: ");
@@ -146,11 +147,45 @@ namespace aula3_EstruturaDecisao
                 && numero2 == numero3)
             {
                 Console.WriteLine("Os numeros são todos iguais");
+                evitarRepeticao = true;
             }
             else
             {
                 Console.WriteLine("O maior numero é o: " + maior);// 12 //55 //66
             }
+
+            //numero1 = 1
+            //numero2 = 5
+            //numero3 = 8
+
+            //numero1 = 9
+            //numero2 = 5
+            //numero3 = 8
+
+            //numero1 = 9
+            //numero2 = 66
+            //numero3 = 8
+
+            //Menor
+            //1 < 5 && 1 < 8
+            //9 < 5 && 9 < 8
+            //9 < 66 && 9 < 8
+            if (numero1 < numero2 && numero1 < numero3)
+            {
+                Console.WriteLine("O menor numero é o: " + numero1);// 1
+            }//5 < 9 && 5 < 8 // 66 < 9 && 66 < 8
+            else if (numero2 < numero1 && numero2 < numero3)
+            {
+                Console.WriteLine("O menor numero é o: " + numero2);
+            }// 8 < 9 && 8 < 66
+            else if (numero3 < numero1 && numero3 < numero2)
+            {
+                Console.WriteLine("O menor numero é o: " + numero3);
+            }
+            //else if (evitarRepeticao != true)
+            //{
+            //    Console.WriteLine("Os numeros são todos iguais");
+            //}
 
 
             #endregion
