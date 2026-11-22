@@ -56,7 +56,36 @@ namespace aula5_metodos
             #region Correção da Ficha
 
             //1.Faça um programa que calcule a área do triangulo.Formula: área = (base x altura) / 2.
+            double area, base1, altura;
+
+            Console.WriteLine("Digite o valor da base: ");
+            base1 = double.Parse( Console.ReadLine());
+
+            Console.WriteLine("Digite o valor da altura: ");
+            altura = double.Parse(Console.ReadLine());
+
+            area = (base1 *  altura) / 2;
+
+            Console.WriteLine("O valor da área é " + area + ".");
+
             //2.Faça um programa para verificar o maior de dois números inteiros(Utilize a estrutura ifelse).
+            int numero1, numero2;
+
+            Console.WriteLine("Digite o 1º número: ");
+            numero1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o 2º número: ");
+            numero2 = int.Parse(Console.ReadLine());
+
+            if (numero1 > numero2)
+            {
+                Console.WriteLine("O número " + numero1 + " é o maior.");
+            }
+            else
+            {
+                Console.WriteLine("O número " + numero2 + " é o maior.");
+            }
+
             //3.Leia n valores representativos do pH e mostre, para cada valor, que tipo de solução
             //representa: ácida(pH < 7), neutra(pH = 7) ou alcalina(pH> 7) (Utilize a estrutura for).
 
