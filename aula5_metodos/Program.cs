@@ -68,7 +68,7 @@ namespace aula5_metodos
 
             Console.WriteLine("O valor da área é " + area + ".");
 
-            //2.Faça um programa para verificar o maior de dois números inteiros(Utilize a estrutura ifelse).
+            //2.Faça um programa para verificar o maior de dois números inteiros(Utilize a estrutura if-else).
             int numero1, numero2;
 
             Console.WriteLine("Digite o 1º número: ");
@@ -77,7 +77,11 @@ namespace aula5_metodos
             Console.WriteLine("Digite o 2º número: ");
             numero2 = int.Parse(Console.ReadLine());
 
-            if (numero1 > numero2)
+            if (numero1 == numero2)
+            {
+                Console.WriteLine("O número " + numero1 + " e o " + numero2 + " são iguais.");
+            }
+            else if (numero1 > numero2)
             {
                 Console.WriteLine("O número " + numero1 + " é o maior.");
             }
@@ -95,25 +99,25 @@ namespace aula5_metodos
             //Console.WriteLine("Quantidade de PHs a verificar: ");
             //quantidadePH = int.Parse(Console.ReadLine());
 
-            //for (int i = 0; i < quantidadePH; i++)
-            for (int i = 0; i < 3; i++)       
-            {
-                Console.WriteLine("Digite o " + (i + 1) + "º  ph: ");
-                ph = int.Parse(Console.ReadLine());
+            ////for (int i = 0; i < quantidadePH; i++)
+            //for (int i = 0; i < 3; i++)       
+            //{
+            //    Console.WriteLine("Digite o " + (i + 1) + "º  ph: ");
+            //    ph = int.Parse(Console.ReadLine());
 
-                if( ph < 7 )
-                {
-                    Console.WriteLine("ácida");
-                }
-                else if( ph == 7 )
-                {
-                    Console.WriteLine("neutra");
-                }
-                else
-                {
-                    Console.WriteLine("alcalina");
-                }
-            }
+            //    if( ph < 7 )
+            //    {
+            //        Console.WriteLine("ácida");
+            //    }
+            //    else if( ph == 7 )
+            //    {
+            //        Console.WriteLine("neutra");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("alcalina");
+            //    }
+            //}
 
             //4.Criar um método que calcule a média de 2 idades.
 
@@ -134,43 +138,43 @@ namespace aula5_metodos
 
             //Media de golos de varias partidas
 
-            int golos = 0, contadorPartidas = 0, somarGolos = 0;
-            double media;
+            //int golos = 0, contadorPartidas = 0, somarGolos = 0;
+            //double media;
 
-            while (golos != -1) // 0 != 1 -> verdade
-            {
-                Console.WriteLine("Digite o número do golos ou -1 para terminar: ");
-                golos = int.Parse( Console.ReadLine() );
-                // 5 -> golos 
-                // 6 -> golos
-                // -1
+            //while (golos != -1) // 0 != 1 -> verdade
+            //{
+            //    Console.WriteLine("Digite o número do golos ou -1 para terminar: ");
+            //    golos = int.Parse( Console.ReadLine() );
+            //    // 5 -> golos 
+            //    // 6 -> golos
+            //    // -1
 
-                //golos = -1
-                // -1 != -1
+            //    //golos = -1
+            //    // -1 != -1
 
 
-                //if (golos == -1)
-                //{
-                //    break;
-                //}
+            //    //if (golos == -1)
+            //    //{
+            //    //    break;
+            //    //}
 
-                if (golos != -1)
-                {
-                    somarGolos += golos;
-                    //somarGolos = somarGolos + golos; // 5 + 6 -> 11 + (-1)
-                    //5
-                    //11
+            //    if (golos != -1)
+            //    {
+            //        somarGolos += golos;
+            //        //somarGolos = somarGolos + golos; // 5 + 6 -> 11 + (-1)
+            //        //5
+            //        //11
 
-                    //contadorPartidas = contadorPartidas + 1; // 0 +1 ->1+1
-                    //1
-                    //2
-                    contadorPartidas++;
-                }
-            }
+            //        //contadorPartidas = contadorPartidas + 1; // 0 +1 ->1+1
+            //        //1
+            //        //2
+            //        contadorPartidas++;
+            //    }
+            //}
 
-            media = (double) somarGolos / contadorPartidas;
+            //media = (double) somarGolos / contadorPartidas;
 
-            Console.WriteLine("Media de golos: " + Math.Round(media, 2));
+            //Console.WriteLine("Media de golos: " + Math.Round(media, 2));
 
             #endregion
 
