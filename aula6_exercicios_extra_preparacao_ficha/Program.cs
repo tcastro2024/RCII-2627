@@ -38,6 +38,49 @@ namespace aula6_exercicios_extra_preparacao_ficha
             return maior;
         }
 
+        static double preco3ValoresMaisBaixo(double preco1, double preco2, double preco3)
+        {
+            double menor;
+
+            if (preco1 < preco2 && preco1 < preco3)
+            {
+                menor = preco1;
+            }
+            else if (preco2 < preco1 && preco2 < preco3)
+            {
+                menor = preco2;
+            }
+            else
+            {
+                menor = preco3;
+            }
+
+            return menor;
+        }
+
+        static int As3MaisVelhas(int idade1, int idade2, int idade3)
+        {
+            int idadeMaisVelha;
+
+            if (idade1 < idade2 && idade1 < idade3)
+            {
+                //return idade1;
+                idadeMaisVelha = idade1;    
+            }
+            else if (idade2 < idade1 && idade2 < idade3)
+            {
+                // return idade2;
+                idadeMaisVelha = idade2;
+            }
+            else
+            {
+                //return idade3;
+                idadeMaisVelha = idade3;
+            }        
+
+            return idadeMaisVelha;
+        }
+
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
@@ -244,104 +287,109 @@ namespace aula6_exercicios_extra_preparacao_ficha
             //4. Leia notas até aparecer - 1.
             //Mostre quantas foram lidas, a média, a maior e a menor. (while)
 
-            double nota = 0, media, maior = double.MinValue, menor = double.MaxValue, somar = 0;
-            int contador = 0;
+            //double nota = 0, media, maior = double.MinValue, menor = double.MaxValue, somar = 0;
+            //int contador = 0;
 
-            while(nota != -1)
-            {
-                Console.WriteLine("Digite a nota ou -1 para terminar: ");
-                nota = double.Parse(Console.ReadLine());
+            //while(nota != -1)
+            //{
+            //    Console.WriteLine("Digite a nota ou -1 para terminar: ");
+            //    nota = double.Parse(Console.ReadLine());
 
-                //if(nota == -1)
-                //{
-                //    break;
-                //}
+            //    //if(nota == -1)
+            //    //{
+            //    //    break;
+            //    //}
 
-                if (nota != -1)
-                {
-                    // MEDIA
-                    //        //somar += nota;
-                    somar = somar + nota;
-                    //        //contador = contador + 1;
-                    contador++;
-
-
-                    //maior = nota;
-                    //menor = nota;
-
-                    // nota = 20
-                    // maior = 0
-                    // 
-                    // 20 > 20
-                    // maior = 20
-                    // 
-                    // nota = 15
-                    // maior = 20
-                    // 
-                    // 15 > 20
-                    //
-                    if (nota > maior)
-                    {
-                        maior = nota;
-                        //maior = 20
-                    }
-
-                    // nota = 20
-                    // menor = 20
-                    // 
-                    // 20 < 20
-                    // menor = 20
-                    // 
-                    // nota = 15
-                    // menor = 20
-                    // 
-                    // 15 < 20
-                    //
-                    // menor = 15
-                    if (nota < menor)
-                    {
-                        menor = nota;
-                    }
-
-                }
-            }
-
-            media = (double) somar / contador;
-
-            Console.WriteLine("Valor da media: " + Math.Round(media, 2));
-            Console.WriteLine("Valor da maior nota: " + Math.Round(maior, 2));
-            Console.WriteLine("Valor da menor nota: " + Math.Round(menor, 2));
+            //    if (nota != -1)
+            //    {
+            //        // MEDIA
+            //        //        //somar += nota;
+            //        somar = somar + nota;
+            //        //        //contador = contador + 1;
+            //        contador++;
 
 
-            
-                //5. Método que recebe 3 preços e devolve o mais baixo.
-                //double maisBaixo;
+            //        //maior = nota;
+            //        //menor = nota;
 
-                //Console.WriteLine("\n--- Exercício 5 (Parte 2) ---");
-                //Console.Write("Preço 1: ");
-                //double p1 = double.Parse(Console.ReadLine());
-                //Console.Write("Preço 2: ");
-                //double p2 = double.Parse(Console.ReadLine());
-                //Console.Write("Preço 3: ");
-                //double p3 = double.Parse(Console.ReadLine());
+            //        // nota = 20
+            //        // maior = 0
+            //        // 
+            //        // 20 > 20
+            //        // maior = 20
+            //        // 
+            //        // nota = 15
+            //        // maior = 20
+            //        // 
+            //        // 15 > 20
+            //        //
+            //        if (nota > maior)
+            //        {
+            //            maior = nota;
+            //            //maior = 20
+            //        }
 
-                //maisBaixo = MaisBaixo(p1, p2, p3);
+            //        // nota = 20
+            //        // menor = 20
+            //        // 
+            //        // 20 < 20
+            //        // menor = 20
+            //        // 
+            //        // nota = 15
+            //        // menor = 20
+            //        // 
+            //        // 15 < 20
+            //        //
+            //        // menor = 15
+            //        if (nota < menor)
+            //        {
+            //            menor = nota;
+            //        }
 
-                //Console.WriteLine($"Preço mais baixo: {:F2} €");
+            //    }
+            //}
 
-                ////6. Método que recebe 3 idades e devolve a mais velha.
-                //Console.WriteLine("\n--- Exercício 6 (Parte 2) ---");
-                //Console.Write("Idade 1: ");
-                //int i1 = int.Parse(Console.ReadLine());
-                //Console.Write("Idade 2: ");
-                //int i2 = int.Parse(Console.ReadLine());
-                //Console.Write("Idade 3: ");
-                //int i3 = int.Parse(Console.ReadLine());
+            //media = (double) somar / contador;
 
-                //Console.WriteLine($"Idade mais velha: {MaisVelha(i1, i2, i3)}");
+            //Console.WriteLine("Valor da media: " + Math.Round(media, 2));
+            //Console.WriteLine("Valor da maior nota: " + Math.Round(maior, 2));
+            //Console.WriteLine("Valor da menor nota: " + Math.Round(menor, 2));
 
 
-                #endregion
+            //5. Método que recebe 3 preços e devolve o mais baixo.
+            //double preco1, preco2, preco3, menor;
+
+            //Console.WriteLine("Digite preço 1: ");
+            //preco1 = double.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Digite preço 2: ");
+            //preco2 = double.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Digite preço 3: ");
+            //preco3 = double.Parse(Console.ReadLine());
+
+            //menor = preco3ValoresMaisBaixo(preco1, preco2, preco3);
+
+            //Console.WriteLine("O menor valor é " + Math.Round(menor, 2));
+
+            ////6. Método que recebe 3 idades e devolve a mais velha.
+            //int idade1, idade2, idade3, maisVelha;
+
+            //Console.Write("Idade 1: ");
+            //idade1 = int.Parse(Console.ReadLine());
+
+            //Console.Write("Idade 2: ");
+            //idade2 = int.Parse(Console.ReadLine());
+
+            //Console.Write("Idade 3: ");
+            //idade3 = int.Parse(Console.ReadLine());
+
+            //maisVelha = As3MaisVelhas(idade1, idade2, idade3);
+
+            //Console.WriteLine("A idade mais velha é " + maisVelha);
+
+
+            #endregion
         }
     }
 }
